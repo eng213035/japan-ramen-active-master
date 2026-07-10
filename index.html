@@ -110,8 +110,9 @@ hr.sec{border:0;border-top:1px solid var(--bd);margin:44px 0 0}
     out to replace Google or Tabelog, and we don't compete on reviews or ratings. We do one thing, and only
     this: every ramen shop in Japan, accurate and clean — built <b>AI-first</b> and <b>English-first</b>, for
     the developers who need it.</p>
-  <p class="sub">Every name checked and corrected, every coordinate verified on 100% of records — structured
-    JSON, ready to drop into your stack.</p>
+  <p class="sub"><b>"Kagoshima," not "Kako Shima."</b> Off-the-shelf romanizers mangle half of Japan's place
+    names — we fixed the <b>50.4%</b> they get wrong, so every English name is one a Japanese reader would
+    actually recognize.</p>
 
   <div class="demo">
     <div class="big">62,173<span class="inline">active shops · nationwide</span></div>
@@ -122,7 +123,8 @@ hr.sec{border:0;border-top:1px solid var(--bd);margin:44px 0 0}
 
   <div class="map" aria-label="A map of Japan formed from ramen-shop coordinates, outlined by a dotted coastline">
     <canvas id="jp" width="720" height="480"></canvas>
-    <div class="cap"><span class="n" id="counter">0</span><span class="l">active shops</span></div>
+    <!-- Initial DOM value MUST be the real active count (crawler / no-JS fallback); JS below animates it. Update this number if the shop count changes. -->
+    <div class="cap"><span class="n" id="counter">62,173</span><span class="l">active shops</span></div>
     <p class="note">Dots are 1,000 shops from the public sample. The dotted coastline is traced from all 62,173 coordinates — no basemap, just the data.</p>
   </div>
 
@@ -166,7 +168,7 @@ hr.sec{border:0;border-top:1px solid var(--bd);margin:44px 0 0}
   <h2>The numbers don't lie.</h2>
   <div class="demo center"><div class="big xl">50.4%<span>of raw Japanese location data contains romanization errors</span></div></div>
   <p>Not 5%. Not 10%. <b>Half.</b> This is the baseline every other API is built on — wrong names that would
-    have shipped straight into your product. We audited all <b>53,502 records</b> and fixed every one.</p>
+    have shipped straight into your product. We audited all <b>62,173 records</b> and fixed every one.</p>
   <p class="mut">How we found and fixed them — the full benchmark, methods, and error breakdown:
     <a class="morelink" href="/story">→ Read the full story</a></p>
 
@@ -226,7 +228,7 @@ hr.sec{border:0;border-top:1px solid var(--bd);margin:44px 0 0}
         <li>Unlimited requests</li>
         <li>All 47 prefectures · 62,173 records</li>
         <li>REST API + MCP server</li>
-        <li>Quarterly data refresh</li>
+        <li>Liveness re-verified weekly</li>
         <li>Verified, corrected names</li>
         <li>100% geocoded coordinates</li>
         <li>Commercial-use license</li>
@@ -255,7 +257,7 @@ hr.sec{border:0;border-top:1px solid var(--bd);margin:44px 0 0}
   <h2>FAQ</h2>
   <dl class="faq">
     <dt>How often is the data updated?</dt>
-    <dd>Quarterly. A full differential refresh roughly every 3 months — new openings and closures are reflected at each cycle.</dd>
+    <dd>Two cadences. <b>Liveness is re-verified weekly</b> — every Monday we re-check the whole set, refresh each shop's last-seen date, flag anything gone missing two weeks running, and web-verify closures before removing them, with a live weekly change feed of openings and closures. The underlying open datasets refresh on their own cadence, roughly quarterly.</dd>
     <dt>Can I actually use this legally?</dt>
     <dd>Yes. Built from public and open data — we don't scrape Tabelog or copy Google Places. An original, independently-derived work.</dd>
     <dt>What format is the API response?</dt>
