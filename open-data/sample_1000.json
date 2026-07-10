@@ -352,7 +352,7 @@
   {
    "rk_id": "rk_pub_00021",
    "name": "麺屋 神楽",
-   "name_en": "Menya Kagura",
+   "name_en": "Men Ya Kagura",
    "pref": "京都府",
    "pref_en": "Kyoto",
    "city": "京都市左京区",
@@ -386,7 +386,7 @@
   {
    "rk_id": "rk_pub_00023",
    "name": "麺屋 たけ井 本店",
-   "name_en": "Men'ya Takei Honten",
+   "name_en": "Menya Takei Honten",
    "pref": "京都府",
    "pref_en": "Kyoto",
    "city": "城陽市",
@@ -1481,7 +1481,7 @@
   {
    "rk_id": "rk_pub_00086",
    "name": "味の時計台 江別野幌店",
-   "name_en": "Ajino Tokeidai",
+   "name_en": "Ajino Tokeidai Ebetsu Nopporo Ten",
    "pref": "北海道",
    "pref_en": "Hokkaido",
    "city": "江別市",
@@ -3018,7 +3018,7 @@
   {
    "rk_id": "rk_pub_00175",
    "name": "ラーメン青木亭 川口店",
-   "name_en": "Ramen Aoki Tei Kawaguchi Ten",
+   "name_en": "Ramen Aokitei Kawaguchi Ten",
    "pref": "埼玉県",
    "pref_en": "Saitama",
    "city": "川口市",
@@ -3107,7 +3107,7 @@
   {
    "rk_id": "rk_pub_00180",
    "name": "椿 ラーメンショップ 木立店",
-   "name_en": "Ramen Shop",
+   "name_en": "Tsubaki Ramen Shop Kodachi Ten",
    "pref": "埼玉県",
    "pref_en": "Saitama",
    "city": "幸手市",
@@ -3247,7 +3247,7 @@
   {
    "rk_id": "rk_pub_00188",
    "name": "おおぎやラーメン 児玉店",
-   "name_en": "Oogiya Ramen",
+   "name_en": "Oogiya Ramen Kodama Ten",
    "pref": "埼玉県",
    "pref_en": "Saitama",
    "city": "本庄市",
@@ -3264,7 +3264,7 @@
   {
    "rk_id": "rk_pub_00189",
    "name": "くるまやラーメン 東松山店",
-   "name_en": "Kurumaya Ramen",
+   "name_en": "Kurumaya Ramen Higashimatsuyama Ten",
    "pref": "埼玉県",
    "pref_en": "Saitama",
    "city": "東松山市",
@@ -3334,7 +3334,7 @@
   {
    "rk_id": "rk_pub_00193",
    "name": "蒙古タンメン中本 熊谷店",
-   "name_en": "Moko Tanmen Nakamoto",
+   "name_en": "Moko Tanmen Nakamoto Kumagaya Ten",
    "pref": "埼玉県",
    "pref_en": "Saitama",
    "city": "熊谷市",
@@ -3664,7 +3664,7 @@
   {
    "rk_id": "rk_pub_00212",
    "name": "ラーメン魁力屋 千里丘店",
-   "name_en": "Kairikiya",
+   "name_en": "Ramen Kairikiya Senri Oka Ten",
    "pref": "大阪府",
    "pref_en": "Osaka",
    "city": "吹田市",
@@ -3717,7 +3717,7 @@
   {
    "rk_id": "rk_pub_00215",
    "name": "ラーメン横綱 鳳店",
-   "name_en": "Ramen Yokozuna",
+   "name_en": "Ramen Yokozuna Otori Ten",
    "pref": "大阪府",
    "pref_en": "Osaka",
    "city": "堺市西区",
@@ -4513,7 +4513,7 @@
   {
    "rk_id": "rk_pub_00261",
    "name": "ラーメンまこと屋 葛城新庄店",
-   "name_en": "Makotoya",
+   "name_en": "Makotoya Katsuragi Shinjo Ten",
    "pref": "奈良県",
    "pref_en": "Nara",
    "city": "葛城市",
@@ -4787,7 +4787,7 @@
   {
    "rk_id": "rk_pub_00277",
    "name": "札幌ラーメン どさん子 古川4号店",
-   "name_en": "Dosanko",
+   "name_en": "Sapporo Ramen Dosanko Furukawa 4 Go Ten",
    "pref": "宮城県",
    "pref_en": "Miyagi",
    "city": "大崎市",
@@ -5131,7 +5131,7 @@
   {
    "rk_id": "rk_pub_00297",
    "name": "リンガーハット イオンモール高岡店",
-   "name_en": "Ringer Hut",
+   "name_en": "Ringer Hut Ionmoru Takaoka Ten",
    "pref": "富山県",
    "pref_en": "Toyama",
    "city": "高岡市",
@@ -7175,7 +7175,7 @@
   {
    "rk_id": "rk_pub_00415",
    "name": "ラーメン山岡家 半田店",
-   "name_en": "Yamaokaya",
+   "name_en": "Ramen Yamaokaya Handa Ten",
    "pref": "愛知県",
    "pref_en": "Aichi",
    "city": "半田市",
@@ -7383,7 +7383,7 @@
   {
    "rk_id": "rk_pub_00427",
    "name": "スガキヤ 新瑞橋イオンモール店",
-   "name_en": "Sugakiya",
+   "name_en": "Sugakiya Aratama Hashi Ionmoru Ten",
    "pref": "愛知県",
    "pref_en": "Aichi",
    "city": "名古屋市南区",
@@ -7438,7 +7438,7 @@
   {
    "rk_id": "rk_pub_00430",
    "name": "来来亭 守山村前店",
-   "name_en": "Rairaitei",
+   "name_en": "Rairaitei Moriyama Mura Mae Ten",
    "pref": "愛知県",
    "pref_en": "Aichi",
    "city": "名古屋市守山区",
@@ -7493,7 +7493,7 @@
   {
    "rk_id": "rk_pub_00433",
    "name": "スガキヤ ららぽーと名古屋みなとアクルス店",
-   "name_en": "Sugakiya",
+   "name_en": "Sugakiya Rarapoto Nagoya Minato Akurusu Ten",
    "pref": "愛知県",
    "pref_en": "Aichi",
    "city": "名古屋市港区",
@@ -7512,7 +7512,7 @@
   {
    "rk_id": "rk_pub_00434",
    "name": "スガキヤ 堀田カインズ店",
-   "name_en": "Sugakiya",
+   "name_en": "Sugakiya Hotta Kainzu Ten",
    "pref": "愛知県",
    "pref_en": "Aichi",
    "city": "名古屋市瑞穂区",
@@ -7877,7 +7877,7 @@
   {
    "rk_id": "rk_pub_00455",
    "name": "丸源ラーメン 若林店",
-   "name_en": "Marugen Ramen",
+   "name_en": "Marugen Ramen Wakabayashi Ten",
    "pref": "愛知県",
    "pref_en": "Aichi",
    "city": "豊田市",
@@ -8000,7 +8000,7 @@
   {
    "rk_id": "rk_pub_00462",
    "name": "札幌ラーメン どさん子 塩沢17号店",
-   "name_en": "Dosanko",
+   "name_en": "Sapporo Ramen Dosanko Shiozawa 17 Go Ten",
    "pref": "新潟県",
    "pref_en": "Niigata",
    "city": "南魚沼市",
@@ -8019,7 +8019,7 @@
   {
    "rk_id": "rk_pub_00463",
    "name": "中華麺食房 三宝亭 小千谷店",
-   "name_en": "Sanpotei",
+   "name_en": "Chukamen Shoku Bo Sanpotei Ojiya Ten",
    "pref": "新潟県",
    "pref_en": "Niigata",
    "city": "小千谷市",
@@ -8278,7 +8278,7 @@
   {
    "rk_id": "rk_pub_00478",
    "name": "ラーメン武蔵家",
-   "name_en": "Musashiya",
+   "name_en": "Ramen Musashiya",
    "pref": "東京都",
    "pref_en": "Tokyo",
    "city": null,
@@ -8420,7 +8420,7 @@
   {
    "rk_id": "rk_pub_00486",
    "name": "町田商店 経堂店",
-   "name_en": "Machida Shoten",
+   "name_en": "Machida Shoten Kyodo Ten",
    "pref": "東京都",
    "pref_en": "Tokyo",
    "city": "世田谷区",
@@ -8541,7 +8541,7 @@
   {
    "rk_id": "rk_pub_00493",
    "name": "舎鈴 勝どき店",
-   "name_en": "Sharin",
+   "name_en": "Sharin Kachi Doki Ten",
    "pref": "東京都",
    "pref_en": "Tokyo",
    "city": "中央区",
@@ -9686,7 +9686,7 @@
   {
    "rk_id": "rk_pub_00558",
    "name": "大勝軒 まるいち 新宿東南口店",
-   "name_en": "Taishoken",
+   "name_en": "Taishoken Maruichi Shinjuku Tonan Kuchi Ten",
    "pref": "東京都",
    "pref_en": "Tokyo",
    "city": "新宿区",
@@ -10140,7 +10140,7 @@
   {
    "rk_id": "rk_pub_00584",
    "name": "横浜ラーメン 武蔵家 武蔵境店",
-   "name_en": "Musashiya",
+   "name_en": "Yokohama Ramen Musashiya Musashisakai Ten",
    "pref": "東京都",
    "pref_en": "Tokyo",
    "city": "武蔵野市",
@@ -10314,7 +10314,7 @@
   {
    "rk_id": "rk_pub_00594",
    "name": "長崎ちゃんぽん リンガーハット 門前仲町店",
-   "name_en": "Ringer Hut",
+   "name_en": "Nagasaki Chanpon Ringer Hut Monzennakamachi Ten",
    "pref": "東京都",
    "pref_en": "Tokyo",
    "city": "江東区",
@@ -10649,7 +10649,7 @@
   {
    "rk_id": "rk_pub_00613",
    "name": "横浜家系ラーメン 壱角家 品川港南口店",
-   "name_en": "Ichikakuya",
+   "name_en": "Yokohama Iekei Ramen Ichikakuya Shinagawa Minatominamiguchi Ten",
    "pref": "東京都",
    "pref_en": "Tokyo",
    "city": "港区",
@@ -10789,7 +10789,7 @@
   {
    "rk_id": "rk_pub_00621",
    "name": "壱角家 鶴川店",
-   "name_en": "Ichikakuya",
+   "name_en": "Ichikakuya Tsurukawa Ten",
    "pref": "東京都",
    "pref_en": "Tokyo",
    "city": "町田市",
@@ -10895,7 +10895,7 @@
   {
    "rk_id": "rk_pub_00627",
    "name": "天下一品 立川店",
-   "name_en": "Tenkaippin",
+   "name_en": "Tenkaippin Tachikawa Ten",
    "pref": "東京都",
    "pref_en": "Tokyo",
    "city": "立川市",
@@ -11156,7 +11156,7 @@
   {
    "rk_id": "rk_pub_00642",
    "name": "長崎ちゃんぽん リンガーハット ジョイフル本田瑞穂店",
-   "name_en": "Ringer Hut",
+   "name_en": "Nagasaki Chanpon Ringer Hut Joifuru Honda Mizuho Ten",
    "pref": "東京都",
    "pref_en": "Tokyo",
    "city": "西多摩郡瑞穂町",
@@ -11453,7 +11453,7 @@
   {
    "rk_id": "rk_pub_00659",
    "name": "中華料理 珍来",
-   "name_en": "Chukaryori Chin Rai",
+   "name_en": "Chukaryori Chinrai",
    "pref": "東京都",
    "pref_en": "Tokyo",
    "city": "足立区",
@@ -12223,7 +12223,7 @@
   {
    "rk_id": "rk_pub_00703",
    "name": "長浜 塩元帥",
-   "name_en": "Shiogensui",
+   "name_en": "Nagahama Shiogensui",
    "pref": "滋賀県",
    "pref_en": "Shiga",
    "city": "長浜市",
@@ -12469,7 +12469,7 @@
   {
    "rk_id": "rk_pub_00717",
    "name": "8番らーめん みなと大橋店",
-   "name_en": "Hachiban Ramen",
+   "name_en": "Hachiban Ramen Minato Ohashi Ten",
    "pref": "石川県",
    "pref_en": "Ishikawa",
    "city": "金沢市",
@@ -12503,7 +12503,7 @@
   {
    "rk_id": "rk_pub_00719",
    "name": "8番らーめん 能登柳田店",
-   "name_en": "Hachiban Ramen",
+   "name_en": "Hachiban Ramen Noto Yanagida Ten",
    "pref": "石川県",
    "pref_en": "Ishikawa",
    "city": "鳳珠郡能登町",
@@ -12590,7 +12590,7 @@
   {
    "rk_id": "rk_pub_00724",
    "name": "横浜家系ラーメン 魂心家 中央林間店",
-   "name_en": "Konshinya",
+   "name_en": "Yokohama Iekei Ramen Konshinya Chuorinkan Ten",
    "pref": "神奈川県",
    "pref_en": "Kanagawa",
    "city": "大和市",
@@ -14057,7 +14057,7 @@
   {
    "rk_id": "rk_pub_00808",
    "name": "長崎ちゃんぽん リンガーハット 福岡白木原店",
-   "name_en": "Ringer Hut",
+   "name_en": "Nagasaki Chanpon Ringer Hut Fukuoka Shirakibaru Ten",
    "pref": "福岡県",
    "pref_en": "Fukuoka",
    "city": "大野城市",
@@ -14176,7 +14176,7 @@
   {
    "rk_id": "rk_pub_00815",
    "name": "ちゃんぽん亭 コシキ 大橋店",
-   "name_en": "Chanpontei",
+   "name_en": "Chanpontei Koshiki Ohashi Ten",
    "pref": "福岡県",
    "pref_en": "Fukuoka",
    "city": "福岡市南区",
@@ -14628,7 +14628,7 @@
   {
    "rk_id": "rk_pub_00841",
    "name": "幸楽苑 相馬店",
-   "name_en": "Kourakuen",
+   "name_en": "Kourakuen Soma Ten",
    "pref": "福島県",
    "pref_en": "Fukushima",
    "city": "相馬市",
@@ -16590,7 +16590,7 @@
   {
    "rk_id": "rk_pub_00955",
    "name": "福龍",
-   "name_en": "Fukuryu",
+   "name_en": "Fuku Ryu",
    "pref": "静岡県",
    "pref_en": "Shizuoka",
    "city": "伊豆の国市",
@@ -16868,7 +16868,7 @@
   {
    "rk_id": "rk_pub_00971",
    "name": "ラーメン魁力屋 藤枝PA下り線店",
-   "name_en": "Kairikiya",
+   "name_en": "Ramen Kairikiya Fujieda Pa Kudari Sen Ten",
    "pref": "静岡県",
    "pref_en": "Shizuoka",
    "city": "藤枝市",
