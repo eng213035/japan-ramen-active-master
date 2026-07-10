@@ -352,7 +352,7 @@
   {
    "rk_id": "rk_pub_00021",
    "name": "麺屋 神楽",
-   "name_en": "Men Ya Kagura",
+   "name_en": "Menya Kagura",
    "pref": "京都府",
    "pref_en": "Kyoto",
    "city": "京都市左京区",
@@ -3353,7 +3353,7 @@
   {
    "rk_id": "rk_pub_00194",
    "name": "優勝軒 狭山店",
-   "name_en": "Yusho Ken Sayama Ten",
+   "name_en": "Yushoken Sayama Ten",
    "pref": "埼玉県",
    "pref_en": "Saitama",
    "city": "狭山市",
@@ -4925,7 +4925,7 @@
   {
    "rk_id": "rk_pub_00285",
    "name": "風来軒 加納本店",
-   "name_en": "Furai Ken Kano Honten",
+   "name_en": "Furaiken Kano Honten",
    "pref": "宮崎県",
    "pref_en": "Miyazaki",
    "city": "宮崎市",
@@ -5184,7 +5184,7 @@
   {
    "rk_id": "rk_pub_00300",
    "name": "麺屋ゆぶき",
-   "name_en": "Men Ya Yubuki",
+   "name_en": "Menya Yubuki",
    "pref": "山口県",
    "pref_en": "Yamaguchi",
    "city": "北九州市門司区",
@@ -5751,7 +5751,7 @@
   {
    "rk_id": "rk_pub_00333",
    "name": "麺屋 我流",
-   "name_en": "Men Ya Garyu",
+   "name_en": "Menya Garyu",
    "pref": "山梨県",
    "pref_en": "Yamanashi",
    "city": "甲斐市",
@@ -6672,7 +6672,7 @@
   {
    "rk_id": "rk_pub_00386",
    "name": "麺屋 秀一",
-   "name_en": "Men Ya Shuichi",
+   "name_en": "Menya Shuichi",
    "pref": "広島県",
    "pref_en": "Hiroshima",
    "city": "広島市中区",
@@ -6914,7 +6914,7 @@
   {
    "rk_id": "rk_pub_00400",
    "name": "麺屋 武春",
-   "name_en": "Men Ya Takeharu",
+   "name_en": "Menya Takeharu",
    "pref": "徳島県",
    "pref_en": "Tokushima",
    "city": "徳島市",
@@ -7788,7 +7788,7 @@
   {
    "rk_id": "rk_pub_00450",
    "name": "うま屋ラーメン 稲沢店",
-   "name_en": "Uma Ya Ramen Inazawa Ten",
+   "name_en": "Umaya Ramen Inazawa Ten",
    "pref": "愛知県",
    "pref_en": "Aichi",
    "city": "稲沢市",
@@ -7966,7 +7966,7 @@
   {
    "rk_id": "rk_pub_00460",
    "name": "ごっつぉ屋 とくっと",
-   "name_en": "Gottsuo Ya Tokutto",
+   "name_en": "Gottsuoya Tokutto",
    "pref": "新潟県",
    "pref_en": "Niigata",
    "city": "上越市大島区",
@@ -8227,7 +8227,7 @@
   {
    "rk_id": "rk_pub_00475",
    "name": "金子屋食堂 本町店",
-   "name_en": "Kaneko Ya Shokudo Honcho Ten",
+   "name_en": "Kanekoya Shokudo Honcho Ten",
    "pref": "新潟県",
    "pref_en": "Niigata",
    "city": "長岡市",
@@ -11731,7 +11731,7 @@
   {
    "rk_id": "rk_pub_00675",
    "name": "麺屋 てつ",
-   "name_en": "Men Ya Tetsu",
+   "name_en": "Menya Tetsu",
    "pref": "栃木県",
    "pref_en": "Tochigi",
    "city": "栃木市",
@@ -11886,7 +11886,7 @@
   {
    "rk_id": "rk_pub_00684",
    "name": "博多麺屋　でてる",
-   "name_en": "Hakata Men Ya Deteru",
+   "name_en": "Hakata Menya Deteru",
    "pref": "沖縄県",
    "pref_en": "Okinawa",
    "city": "うるま市",
@@ -14403,7 +14403,7 @@
   {
    "rk_id": "rk_pub_00828",
    "name": "麺屋 のぞみ",
-   "name_en": "Men Ya Nozomi",
+   "name_en": "Menya Nozomi",
    "pref": "福島県",
    "pref_en": "Fukushima",
    "city": "いわき市",
@@ -14840,7 +14840,7 @@
    "pref": "秋田県",
    "pref_en": "Akita",
    "city": "北秋田市",
-   "city_en": "Kitakita Shi",
+   "city_en": "Kita Akita Shi",
    "lat": 40.253178,
    "lng": 140.385162,
    "keito": [],
@@ -14921,7 +14921,7 @@
   {
    "rk_id": "rk_pub_00858",
    "name": "麺屋 ゑびす",
-   "name_en": "Men Ya Ebisu",
+   "name_en": "Menya Ebisu",
    "pref": "秋田県",
    "pref_en": "Akita",
    "city": "秋田市",
@@ -15951,7 +15951,7 @@
   {
    "rk_id": "rk_pub_00918",
    "name": "横浜家系ラーメン 龍馬屋 東長崎店",
-   "name_en": "Yokohama Iekei Ramen Ryoma Ya Higashinagasaki Ten",
+   "name_en": "Yokohama Iekei Ramen Ryomaya Higashinagasaki Ten",
    "pref": "長崎県",
    "pref_en": "Nagasaki",
    "city": "長崎市",
@@ -16195,7 +16195,7 @@
   {
    "rk_id": "rk_pub_00932",
    "name": "麺屋 絆",
-   "name_en": "Men Ya Kizuna",
+   "name_en": "Menya Kizuna",
    "pref": "長野県",
    "pref_en": "Nagano",
    "city": "松本市",
@@ -16382,7 +16382,7 @@
   {
    "rk_id": "rk_pub_00943",
    "name": "ごはん屋 口福食堂",
-   "name_en": "Gohan Ya Kofuku Shokudo",
+   "name_en": "Gohanya Kofuku Shokudo",
    "pref": "青森県",
    "pref_en": "Aomori",
    "city": "五所川原市",
@@ -17112,7 +17112,7 @@
   {
    "rk_id": "rk_pub_00985",
    "name": "麺屋 輝",
-   "name_en": "Men Ya Teru",
+   "name_en": "Menya Teru",
    "pref": "高知県",
    "pref_en": "Kochi",
    "city": "高知市",
@@ -17197,7 +17197,7 @@
   {
    "rk_id": "rk_pub_00990",
    "name": "拉麺本家夢屋 扇町店",
-   "name_en": "Ramen Honke Yume Ya Ogimachi Ten",
+   "name_en": "Ramen Honke Yumeya Ogimachi Ten",
    "pref": "鳥取県",
    "pref_en": "Tottori",
    "city": "鳥取市",
