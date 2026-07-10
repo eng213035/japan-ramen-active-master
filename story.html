@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How we built the cleanest ramen location API — the technical story</title>
+<meta name="description" content="Romanization, benchmarks, coordinates and licensing — how Japan Ramen Active Master corrects a 50.4% romanization-error baseline and verifies every coordinate.">
+<link rel="canonical" href="https://ramen.gachi-tokusuru.com/story">
+</head>
+<body>
+<style>
+:root{--fg:#1a1a1a;--mut:#666;--acc:#0b6;--acc-d:#093;--bg:#fff;--card:#f6f8f7;--bd:#e3e8e6;--red:#c0392b}
+*{box-sizing:border-box}
+.wrap{max-width:760px;margin:0 auto;padding:28px 20px 72px;
+  font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--fg);background:var(--bg)}
+.wrap h1{font-size:30px;line-height:1.18;margin:8px 0 10px;letter-spacing:-.01em}
+.wrap h2{font-size:22px;margin:0 0 12px;letter-spacing:-.01em}
+.sub{color:var(--mut);font-size:18px;margin:0 0 8px}
+.backlink{font-size:13px}
+.morelink{font-weight:600}
+p{margin:0 0 14px}
+.lead{font-size:17px}
+.mut{color:var(--mut)}
+b{font-weight:600} em{font-style:italic;color:var(--acc-d)}
+a{color:var(--acc)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em}
+section{border-top:1px solid var(--bd);padding-top:36px;margin-top:44px}
+.callout{background:var(--card);border:1px solid var(--bd);border-left:3px solid var(--acc);border-radius:6px;padding:14px 16px;margin:16px 0}
+.demo{background:linear-gradient(135deg,var(--acc),var(--acc-d));color:#fff;border-radius:10px;padding:22px;margin:20px 0;text-align:center}
+.demo .big{font-size:44px;font-weight:700;line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.demo .big span{display:block;font-size:15px;font-weight:600;opacity:.9;margin-top:8px}
+table{width:100%;border-collapse:collapse;margin:10px 0}
+th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--bd);vertical-align:top;font-size:14.5px}
+th{font-size:12px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+.cmp .box{border:1px solid var(--bd);border-radius:8px;overflow:hidden}
+.cmp .hd{font:600 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;padding:10px 12px}
+.cmp .bad .hd{background:#fbeeec;color:var(--red);border-bottom:1px solid #f0d5d0}
+.cmp .good .hd{background:#eaf7f0;color:var(--acc-d);border-bottom:1px solid #cfeadd}
+.cmp .row{padding:9px 12px;border-top:1px solid var(--bd);font-size:14px}
+.cmp .row:first-of-type{border-top:0}
+.cmp .jpn{font-weight:600}.cmp .arr{color:var(--mut)}
+.cmp .en{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px}
+.cmp .bad .en{color:var(--red)}.cmp .good .en{color:var(--acc-d)}
+.cmp .gloss{display:block;color:var(--mut);font-size:12px;font-style:italic;margin-top:2px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0}
+@media(max-width:560px){.cmp,.cards{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:16px}
+.card .num{font:700 26px/1 ui-monospace,SFMono-Regular,Menlo,monospace;font-variant-numeric:tabular-nums}
+.card .num span{font-size:14px;color:var(--mut)}
+.card p{margin:8px 0 0;font-size:14px;color:var(--mut)}
+.final{border-top:2px solid var(--acc);margin-top:52px;padding-top:28px;text-align:center}
+.final h2{margin-bottom:18px}
+.btnrow{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:14px 0}
+.btn{display:inline-block;text-decoration:none;font-size:14px;font-weight:600;padding:11px 20px;border-radius:6px}
+.btn.p{background:var(--acc);color:#fff}
+.btn.g{background:var(--card);color:var(--acc);border:1px solid var(--bd)}
+.btn:focus-visible{outline:2px solid var(--acc-d);outline-offset:2px}
+</style><div class="wrap">
+  <h1>How we built the world's cleanest ramen location API</h1>
+  <p class="sub">The full technical story — data, AI benchmarks, romanization failures, and what it actually took.</p>
+
+  <section>
+    <h2>The romanization problem — why your map is lying to you</h2>
+    <p>Japanese restaurant names aren't text. They're cultural artifacts: classical Chinese readings, irregular
+      place-name pronunciations, katakana loan-words that must be back-translated to English, historical terms
+      that predate modern Japanese. Standard romanization libraries treat them as text — and the results aren't
+      subtle errors. They're <b>completely different words.</b></p>
+    <div class="cmp">
+      <div class="box bad">
+        <div class="hd">✗ pykakasi · industry-standard library</div>
+        <div class="row"><span class="jpn">光華園</span> <span class="arr">→</span> <span class="en">Hikari Hanazono</span><span class="gloss">"a flower garden" — it's a ramen shop</span></div>
+        <div class="row"><span class="jpn">岩洞湖レストハウス</span> <span class="arr">→</span> <span class="en">Iwa Hora Mizumi</span><span class="gloss">"rock hole lake" — the name vanished</span></div>
+        <div class="row"><span class="jpn">満洲里</span> <span class="arr">→</span> <span class="en">Manshu Sato</span><span class="gloss">a surname appeared from nowhere</span></div>
+        <div class="row"><span class="jpn">国際展示場駅</span> <span class="arr">→</span> <span class="en">Ariake</span><span class="gloss">a different station entirely</span></div>
+      </div>
+      <div class="box good">
+        <div class="hd">✓ Claude Opus 4.8 · thinking off</div>
+        <div class="row"><span class="jpn">光華園</span> <span class="arr">→</span> <span class="en">Kokaen</span></div>
+        <div class="row"><span class="jpn">岩洞湖レストハウス</span> <span class="arr">→</span> <span class="en">Gandoko Rest House</span></div>
+        <div class="row"><span class="jpn">満洲里</span> <span class="arr">→</span> <span class="en">Manshuri</span></div>
+        <div class="row"><span class="jpn">国際展示場駅</span> <span class="arr">→</span> <span class="en">Kokusai-tenjijo</span></div>
+      </div>
+    </div>
+    <p class="mut">This isn't transliteration. It's cultural intelligence at inference speed.</p>
+  </section>
+
+  <section>
+    <h2>We didn't trust one AI. We ran two.</h2>
+    <p>We evaluated <b>53,502 restaurant records</b> independently with <b>Claude Sonnet 5</b> and
+      <b>Claude Opus 4.8</b> — same dataset, same prompt, zero collaboration — then compared every verdict
+      <span class="mut">(53,502 total records evaluated; 51,967 shared between both models — the remainder were
+      ASCII names or override-excluded records).</span></p>
+    <div class="demo"><div class="big">50.4%<span>of raw Japanese location data had wrong romanization</span></div></div>
+    <p>Not 5%. Not 10%. <b>Half</b> of the raw Japanese location data — the baseline every other API is built
+      on — was wrong. Here is how the two models compared on their 51,967 shared records:</p>
+    <table>
+      <thead><tr><th>Agreement class</th><th class="num">Share</th></tr></thead>
+      <tbody>
+        <tr><td>Both correct</td><td class="num">43.0%</td></tr>
+        <tr><td>Both caught the error · same fix</td><td class="num">26.2%</td></tr>
+        <tr><td><b>Opus only</b> — Sonnet missed it</td><td class="num">14.5%</td></tr>
+        <tr><td>Disagreement · human review</td><td class="num">9.9%</td></tr>
+        <tr><td>Sonnet only · false positive</td><td class="num">6.4%</td></tr>
+        <tr><td class="mut">Full agreement (verdict + fix)</td><td class="num mut">69.2%</td></tr>
+      </tbody>
+    </table>
+    <p><b>Opus caught 7,548 errors Sonnet missed;</b> Sonnet falsely flagged 3,333 correct records. The gap
+      between "good-enough AI" and the best available AI isn't academic — it's 7,548 wrong restaurant names
+      that would have shipped in your product. We used Opus as the authority, and applied all 26,975 fixes.</p>
+    <p class="mut">The 26,975 errors, classified:</p>
+    <table>
+      <thead><tr><th>Error type</th><th class="num">Count</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td>misread</td><td class="num">9,027</td><td class="mut">光華→Hikari</td></tr>
+        <tr><td>oversplit</td><td class="num">8,866</td><td class="mut">石垣島→Ishi Gaki Shima</td></tr>
+        <tr><td>katakana</td><td class="num">3,964</td><td class="mut">カントリークラブ→Kantori Kurabu</td></tr>
+        <tr><td>mixup</td><td class="num">2,777</td><td class="mut">another shop's data merged in</td></tr>
+        <tr><td>other</td><td class="num">1,240</td><td class="mut">—</td></tr>
+        <tr><td>placename</td><td class="num">781</td><td class="mut">岩洞湖→Iwa Hora Mizumi</td></tr>
+        <tr><td>chinese</td><td class="num">282</td><td class="mut">満洲里→Manshu Sato</td></tr>
+        <tr><td>okurigana</td><td class="num">35</td><td class="mut">—</td></tr>
+      </tbody>
+    </table>
+    <p>We then audited the <b>8,650 train stations</b> in our station master. Even the official transit source
+      had errors — <b>261 stations (3.0%)</b>, of which <b>227 were corrected and applied</b>
+      (国際展示場 Ariake→Kokusai-tenjijo, 後楽園 Kasuga→Korakuen). No dataset escaped the audit.</p>
+  </section>
+
+  <section>
+    <h2>Where the data comes from</h2>
+    <p>Japanese government food permits record every opening, every closure, every address change. We
+      integrate that data with public open datasets into one clean, consistent schema.</p>
+    <p><b>The value isn't the source. It's that we made it usable.</b></p>
+    <div class="callout">
+      <b>Coverage</b> · All 47 prefectures &nbsp;·&nbsp; <b>Sources</b> · Public &amp; open datasets &nbsp;·&nbsp; <b>Refresh</b> · Quarterly (every ~3 months)
+    </div>
+  </section>
+
+  <section>
+    <h2>Coordinates — the pin has to be right</h2>
+    <p>Clean names aren't enough; a pin on the wrong block breaks the experience. <b>Every one of the 62,173
+      records carries a latitude &amp; longitude</b> — geocoded from its address, not inherited from a scrape.</p>
+    <p>We actively purge bad coordinates. When we found <b>131 overseas branches</b> a Japan-only geocoder had
+      silently parked on garbage domestic coordinates (a Hong Kong shop sitting in Niigata), we detected and
+      removed every one. Each shop is then enriched with its <b>nearest station</b> — name, English name, and
+      distance in metres.</p>
+    <div class="cards">
+      <div class="card"><div class="num">62,173</div><p>records with lat / lng · 100%</p></div>
+      <div class="card"><div class="num">47<span>/47</span></div><p>prefectures covered</p></div>
+      <div class="card"><div class="num">0</div><p>overseas / garbage pins</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Can I actually use this?</h2>
+    <p>Yes. The data is built from public and open datasets. We do not scrape Tabelog, we do not copy Google
+      Places, we do not reverse-engineer competitors. Every coordinate is geocoded by us, every romanization
+      re-generated and verified by us — an original, independently-structured derived work, facts only, with no
+      reviews or photos.</p>
+  </section>
+
+  <div class="final">
+    <h2>Convinced?</h2>
+    <div class="btnrow">
+      <a class="btn p" href="/subscribe" style="font-size:15px;padding:13px 26px">Get full access → $500/mo</a>
+      <a class="btn g" href="/#start">Start free trial</a>
+    </div>
+    <p class="mut" style="font-size:13px;margin-top:2px">7 days · 1,000 req/day · no credit card</p>
+    <p style="margin-top:14px"><a class="morelink" href="https://github.com/eng213035/japan-ramen-active-master" target="_blank" rel="noopener">Download sample_1000.json</a> <span class="mut">· 1,000 real records · no signup</span></p>
+    <hr style="border:0;border-top:1px solid var(--bd);margin:22px 0 16px">
+    <p class="backlink"><a href="/">← Back to overview</a></p>
+  </div>
+</div>
+</body>
+</html>

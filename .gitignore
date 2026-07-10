@@ -1,0 +1,9 @@
+.DS_Store
+*.log
+HANDOFF.md
+HANDOFF-*.md
+# Internal LP generator + Artifact-only fragment previews (public repo ships index.html / story.html)
+build/
+preview-lp.html
+preview-story.html
+styles.css
