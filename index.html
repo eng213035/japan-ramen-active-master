@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Japan Ramen Active Master — the cleanest ramen location API (REST · MCP)</title>
-<meta name="description" content="Every active ramen shop in Japan — 62,173 records, 100% geocoded, names verified and corrected. English-first, AI-first. REST API + MCP server. 7-day free trial.">
+<meta name="description" content="Every active ramen shop in Japan — 62,144 records, 100% geocoded, names verified and corrected. English-first, AI-first. REST API + MCP server. Free, no-signup API.">
 <link rel="canonical" href="https://ramen.gachi-tokusuru.com/">
 </head>
 <body>
@@ -103,7 +103,7 @@ hr.sec{border:0;border-top:1px solid var(--bd);margin:44px 0 0}
 </style><div class="wrap">
   <div class="badges">
     <span class="tag solid">REST API</span><span class="tag solid">MCP</span>
-    <span class="tag">62,173 shops</span><span class="tag">100% geocoded</span><span class="tag">Verified names</span>
+    <span class="tag">62,144 shops</span><span class="tag">100% geocoded</span><span class="tag">Verified names</span>
   </div>
   <h1>The world's cleanest ramen location API.</h1>
   <p class="tagline">Our mission is simple: <b>is this ramen shop still open — and exactly where?</b> We're not
@@ -115,7 +115,7 @@ hr.sec{border:0;border-top:1px solid var(--bd);margin:44px 0 0}
     actually recognize.</p>
 
   <div class="demo">
-    <div class="big">62,173<span class="inline">active shops · nationwide</span></div>
+    <div class="big">62,144<span class="inline">active shops · nationwide</span></div>
     <p><b>100% geocoded. Japan-only. Clean, corrected names.</b> A structured master of shops that are actually
       open today — closed &amp; relocated stores dropped, overseas branches excluded, every record carrying a
       verified latitude &amp; longitude and a checked, corrected romanized name.</p>
@@ -124,8 +124,8 @@ hr.sec{border:0;border-top:1px solid var(--bd);margin:44px 0 0}
   <div class="map" aria-label="A map of Japan formed from ramen-shop coordinates, outlined by a dotted coastline">
     <canvas id="jp" width="720" height="480"></canvas>
     <!-- Initial DOM value MUST be the real active count (crawler / no-JS fallback); JS below animates it. Update this number if the shop count changes. -->
-    <div class="cap"><span class="n" id="counter">62,173</span><span class="l">active shops</span></div>
-    <p class="note">Dots are 1,000 shops from the public sample. The dotted coastline is traced from all 62,173 coordinates — no basemap, just the data.</p>
+    <div class="cap"><span class="n" id="counter">62,144</span><span class="l">active shops</span></div>
+    <p class="note">Dots are 1,000 shops from the public sample. The dotted coastline is traced from all 62,144 coordinates — no basemap, just the data.</p>
   </div>
 
   <h2>Built for the AI-first stack</h2>
@@ -168,14 +168,13 @@ hr.sec{border:0;border-top:1px solid var(--bd);margin:44px 0 0}
   <h2>The numbers don't lie.</h2>
   <div class="demo center"><div class="big xl">50.4%<span>of raw Japanese location data contains romanization errors</span></div></div>
   <p>Not 5%. Not 10%. <b>Half.</b> This is the baseline every other API is built on — wrong names that would
-    have shipped straight into your product. We audited all <b>62,173 records</b> and fixed every one.</p>
+    have shipped straight into your product. We audited all <b>62,144 records</b> and fixed every one.</p>
   <p class="mut">How we found and fixed them — the full benchmark, methods, and error breakdown:
     <a class="morelink" href="/story">→ Read the full story</a></p>
 
   <hr class="sec">
   <h2>Quick start</h2>
-<pre>curl "https://ramen.gachi-tokusuru.com/v1/shops?pref=Tokyo&amp;limit=2" \
-  -H "Authorization: Bearer YOUR_KEY"
+<pre>curl "https://ramen.gachi-tokusuru.com/v1/shops?pref=Tokyo&amp;limit=2"
 
 [
   { "name_en": "Afuri", "pref_en": "Tokyo", "city_en": "Shibuya",
@@ -198,8 +197,7 @@ hr.sec{border:0;border-top:1px solid var(--bd);margin:44px 0 0}
 <pre>{
   "mcpServers": {
     "japan-ramen": {
-      "url": "https://ramen.gachi-tokusuru.com/mcp",
-      "headers": { "Authorization": "Bearer YOUR_KEY" }
+      "url": "https://ramen.gachi-tokusuru.com/mcp"
     }
   }
 }</pre>
@@ -208,16 +206,16 @@ hr.sec{border:0;border-top:1px solid var(--bd);margin:44px 0 0}
   <h2>Pricing</h2>
   <div class="plans">
     <div class="plan">
-      <div class="pname">Free trial</div>
+      <div class="pname">Free</div>
       <div class="amt">$0</div>
-      <div class="per">for 7 days</div>
+      <div class="per">no key, no signup</div>
       <ul>
-        <li>1,000 requests / day</li>
-        <li>Tokyo, Osaka &amp; Fukuoka</li>
-        <li>REST API + MCP server</li>
-        <li>No credit card required</li>
+        <li>No API key needed</li>
+        <li>60 requests / min per IP</li>
+        <li>All 47 prefectures · 62,144 records</li>
+        <li>MCP server — open, no auth</li>
       </ul>
-      <a class="btn g" href="#start">Start free trial</a>
+      <a class="btn g" href="#start">Try it now →</a>
     </div>
     <div class="plan pro">
       <span class="badge-pop">Full access</span>
@@ -226,9 +224,9 @@ hr.sec{border:0;border-top:1px solid var(--bd);margin:44px 0 0}
       <div class="per">everything, from day one</div>
       <ul>
         <li>Unlimited requests</li>
-        <li>All 47 prefectures · 62,173 records</li>
+        <li>All 47 prefectures · 62,144 records</li>
         <li>REST API + MCP server</li>
-        <li>Liveness re-verified weekly</li>
+        <li>Liveness re-verified monthly</li>
         <li>Verified, corrected names</li>
         <li>100% geocoded coordinates</li>
         <li>Commercial-use license</li>
@@ -241,27 +239,36 @@ hr.sec{border:0;border-top:1px solid var(--bd);margin:44px 0 0}
     <a href="/sample_1000.json" target="_blank" rel="noopener">download sample_1000.json</a> — 1,000 real records, no signup.</p>
 
   <hr class="sec">
-  <h2 id="start">Start your free trial</h2>
-  <p>Get a key by email — no credit card. <b>7 days · 1,000 requests/day · Tokyo, Osaka &amp; Fukuoka</b>,
-    over REST and MCP. Enter an email and your key appears instantly below.</p>
-  <form class="contact" id="trialform">
-    <label for="tmail">Email</label>
-    <input id="tmail" type="email" placeholder="you@example.com" autocomplete="email" required>
-    <button type="submit">Get my trial key</button>
-    <div class="out" id="tout" role="status" aria-live="polite"></div>
-  </form>
-  <p class="mut">Your key works immediately:
-    <code>curl "https://ramen.gachi-tokusuru.com/v1/shops?pref=Tokyo&amp;limit=2" -H "Authorization: Bearer YOUR_KEY"</code>.
-    Ready for the other 44 prefectures and unlimited volume? <a href="/subscribe">Go Pro →</a></p>
+  <h2 id="start">Start now — no signup</h2>
+  <p>No key, no email, no credit card. Both the REST API and the MCP endpoint are open to everyone —
+    all 47 prefectures, rate-limited to <b>60 requests / min per IP</b>. No-auth calls return up to 20 results,
+    nearby search up to a 2,000&nbsp;m radius, and the change feed covers the last 7 days. Paste this and you're live:</p>
+  <pre>curl "https://ramen.gachi-tokusuru.com/v1/shops?pref=Tokyo&amp;limit=3"</pre>
+  <p class="mut">Prefer JSON-RPC or agent tooling? The MCP endpoint is <code>POST /mcp</code>
+    (tools: search_ramen, get_ramen_shop, get_ramen_changes) — no key either. Schema at
+    <a href="/docs">/docs</a> and <a href="/openapi.yaml">/openapi.yaml</a>.
+    Need the full change-history feed or higher volume? <a href="/subscribe">Go Pro →</a></p>
+
+  <hr class="sec">
+  <h2 id="changelog">Recent updates</h2>
+  <p class="mut">Every crawl cycle we publish exactly what changed — new shops, and closures we\'ve
+    web-verified (with evidence) before removing. Full history via the <code>get_ramen_changes</code>
+    MCP tool or <a href="/subscribe">Pro</a>.</p>
+  <dl class="faq">
+    <dt>2026-07-17 — nationwide re-crawl</dt>
+    <dd>Re-checked all 47 prefectures. <b>3 shops added</b>; <b>32 closures web-verified and removed</b>
+      (each with a source link). Renames were kept live; unconfirmed disappearances were left active.
+      Data current as of 2026-07-17 · <b>62,144 active shops</b>.</dd>
+  </dl>
 
   <h2>FAQ</h2>
   <dl class="faq">
     <dt>How often is the data updated?</dt>
-    <dd>Two cadences. <b>Liveness is re-verified weekly</b> — every Monday we re-check the whole set, refresh each shop's last-seen date, flag anything gone missing two weeks running, and web-verify closures before removing them, with a live weekly change feed of openings and closures. The underlying open datasets refresh on their own cadence, roughly quarterly.</dd>
+    <dd>Two cadences. <b>Liveness is re-verified monthly</b> — each month we re-check the whole set, refresh each shop's last-seen date, flag anything gone missing two runs in a row, and web-verify closures before removing them, with a change feed of openings and closures. The underlying open datasets refresh on their own cadence, roughly quarterly.</dd>
     <dt>Can I actually use this legally?</dt>
     <dd>Yes. Built from public and open data — we don't scrape Tabelog or copy Google Places. An original, independently-derived work.</dd>
     <dt>What format is the API response?</dt>
-    <dd>JSON over REST, plus an MCP server. Schema documentation on signup.</dd>
+    <dd>JSON over REST, plus an MCP server. Schema at <a href="/docs">/docs</a> and <a href="/openapi.yaml">/openapi.yaml</a> — no signup.</dd>
   </dl>
 
   <hr class="sec">
@@ -324,7 +331,7 @@ const PTS = [[35.151,136.511],[34.507,136.705],[34.969,136.624],[34.945,136.537]
       outline(0.78*Math.min(1,k*1.6)); dots(Math.floor(pts.length*Math.min(1,k*1.2)),0.85);
       if(k<1) requestAnimationFrame(step); else full(); })(t0); }
   let rt;window.addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>{layout();full();},150);});
-  const el=document.getElementById('counter'),target=62173;
+  const el=document.getElementById('counter'),target=62144;
   if(reduce){el.textContent=target.toLocaleString('en-US');}
   else{const t0=performance.now(),dur=1500;(function tk(t){const k=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-k,3);
     el.textContent=Math.round(target*e).toLocaleString('en-US');if(k<1)requestAnimationFrame(tk);})(t0);}
@@ -332,17 +339,6 @@ const PTS = [[35.151,136.511],[34.507,136.705],[34.969,136.624],[34.945,136.537]
 (function(){
   var API='https://ramen.gachi-tokusuru.com';
   function show(el,html){el.innerHTML=html;el.classList.add('show');}
-  var tf=document.getElementById('trialform');
-  if(tf) tf.addEventListener('submit',function(e){e.preventDefault();
-    var out=document.getElementById('tout'),email=document.getElementById('tmail').value.trim();
-    show(out,'Creating your key…');
-    fetch(API+'/keys',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({email:email})})
-      .then(function(r){return r.json().then(function(d){return {ok:r.ok,d:d};});})
-      .then(function(res){
-        if(res.ok&&res.d.api_key){show(out,'<b>Your trial key</b> — expires in 7 days:<span class="keybox">'+res.d.api_key+'</span>Copy it now. Covers '+(res.d.coverage||'Tokyo, Osaka &amp; Fukuoka')+' at '+(res.d.daily_limit||1000)+' requests/day.');}
-        else{show(out,(res.d.message||res.d.error||'Something went wrong')+' — or email <a href="mailto:contact@gachi-tokusuru.com">contact@gachi-tokusuru.com</a>.');}
-      }).catch(function(){show(out,'Network error — email <a href="mailto:contact@gachi-tokusuru.com">contact@gachi-tokusuru.com</a>.');});
-  });
   var bf=document.getElementById('bizform');
   if(bf) bf.addEventListener('submit',function(e){e.preventDefault();
     var out=document.getElementById('cout'),email=document.getElementById('cmail').value.trim(),msg=document.getElementById('cmsg').value.trim();
