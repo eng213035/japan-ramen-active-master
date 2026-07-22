@@ -7,7 +7,7 @@
 We do one thing: *is this ramen shop still open — and exactly where?* Not a reviews site, not a Google or
 Tabelog replacement — a clean, structured master your agent can treat as ground truth.
 
-🔗 **Landing page, live demo & free trial:** https://ramen.gachi-tokusuru.com
+🔗 **Landing page, live demo & free tier:** https://ramen.gachi-tokusuru.com
 📖 **The technical story** (romanization, benchmarks, coordinates): https://ramen.gachi-tokusuru.com/story
 
 ---
@@ -93,10 +93,10 @@ Grab a key on the landing page. Without a valid key the API returns **`401`**.
 
 | Plan | Price | What you get |
 |---|---|---|
-| **Free trial** | $0 | 7-day trial · 1,000 requests/day · Tokyo, Osaka & Fukuoka · REST + MCP · no credit card |
+| **Free** | $0 | Nationwide (all 47 prefectures) · MCP server · 60 requests/min (keyless) or 1,000 requests/month (free key) · no credit card |
 | **Pro** ⭐ | **$500 / mo** | Unlimited requests · all 47 prefectures · REST + MCP · quarterly refresh · commercial-use license |
 
-[Start the free trial →](https://ramen.gachi-tokusuru.com/#start) ·
+[Try it free →](https://ramen.gachi-tokusuru.com/#start) ·
 Need multi-seat, redistribution, bulk, or a dataset you don't see? [Contact us](mailto:contact@gachi-tokusuru.com).
 
 ---

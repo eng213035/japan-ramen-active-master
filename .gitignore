@@ -7,3 +7,7 @@ build/
 preview-lp.html
 preview-story.html
 styles.css
+
+# Editor/backup snapshots — never publish to the public repo
+*.bak
+*.bak-*
