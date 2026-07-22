@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Japan Ramen Active Master — the cleanest ramen location API (REST · MCP)</title>
-<meta name="description" content="Every active ramen shop in Japan — 62,144 records, 100% geocoded, names verified and corrected. English-first, AI-first. REST API + MCP server. Free, no-signup API.">
+<meta name="description" content="Every active ramen shop in Japan — 62,261 records, 100% geocoded, names verified and corrected. English-first, AI-first. REST API + MCP server. Free, no-signup API.">
 <link rel="canonical" href="https://ramen.gachi-tokusuru.com/">
 </head>
 <body>
@@ -103,7 +103,7 @@ hr.sec{border:0;border-top:1px solid var(--bd);margin:44px 0 0}
 </style><div class="wrap">
   <div class="badges">
     <span class="tag solid">REST API</span><span class="tag solid">MCP</span>
-    <span class="tag">62,144 shops</span><span class="tag">100% geocoded</span><span class="tag">Verified names</span>
+    <span class="tag">62,261 shops</span><span class="tag">100% geocoded</span><span class="tag">Verified names</span>
   </div>
   <h1>The world's cleanest ramen location API.</h1>
   <p class="tagline">Our mission is simple: <b>is this ramen shop still open — and exactly where?</b> We're not
@@ -115,7 +115,7 @@ hr.sec{border:0;border-top:1px solid var(--bd);margin:44px 0 0}
     actually recognize.</p>
 
   <div class="demo">
-    <div class="big">62,144<span class="inline">active shops · nationwide</span></div>
+    <div class="big">62,261<span class="inline">active shops · nationwide</span></div>
     <p><b>100% geocoded. Japan-only. Clean, corrected names.</b> A structured master of shops that are actually
       open today — closed &amp; relocated stores dropped, overseas branches excluded, every record carrying a
       verified latitude &amp; longitude and a checked, corrected romanized name.</p>
@@ -124,8 +124,8 @@ hr.sec{border:0;border-top:1px solid var(--bd);margin:44px 0 0}
   <div class="map" aria-label="A map of Japan formed from ramen-shop coordinates, outlined by a dotted coastline">
     <canvas id="jp" width="720" height="480"></canvas>
     <!-- Initial DOM value MUST be the real active count (crawler / no-JS fallback); JS below animates it. Update this number if the shop count changes. -->
-    <div class="cap"><span class="n" id="counter">62,144</span><span class="l">active shops</span></div>
-    <p class="note">Dots are 1,000 shops from the public sample. The dotted coastline is traced from all 62,144 coordinates — no basemap, just the data.</p>
+    <div class="cap"><span class="n" id="counter">62,261</span><span class="l">active shops</span></div>
+    <p class="note">Dots are 1,000 shops from the public sample. The dotted coastline is traced from all 62,261 coordinates — no basemap, just the data.</p>
   </div>
 
   <h2>Built for the AI-first stack</h2>
@@ -168,7 +168,7 @@ hr.sec{border:0;border-top:1px solid var(--bd);margin:44px 0 0}
   <h2>The numbers don't lie.</h2>
   <div class="demo center"><div class="big xl">50.4%<span>of raw Japanese location data contains romanization errors</span></div></div>
   <p>Not 5%. Not 10%. <b>Half.</b> This is the baseline every other API is built on — wrong names that would
-    have shipped straight into your product. We audited all <b>62,144 records</b> and fixed every one.</p>
+    have shipped straight into your product. We audited all <b>62,261 records</b> and fixed every one.</p>
   <p class="mut">How we found and fixed them — the full benchmark, methods, and error breakdown:
     <a class="morelink" href="/story">→ Read the full story</a></p>
 
@@ -212,7 +212,7 @@ hr.sec{border:0;border-top:1px solid var(--bd);margin:44px 0 0}
       <ul>
         <li>No API key needed</li>
         <li>60 requests / min per IP</li>
-        <li>All 47 prefectures · 62,144 records</li>
+        <li>All 47 prefectures · 62,261 records</li>
         <li>MCP server — open, no auth</li>
       </ul>
       <a class="btn g" href="#start">Try it now →</a>
@@ -224,7 +224,7 @@ hr.sec{border:0;border-top:1px solid var(--bd);margin:44px 0 0}
       <div class="per">everything, from day one</div>
       <ul>
         <li>Unlimited requests</li>
-        <li>All 47 prefectures · 62,144 records</li>
+        <li>All 47 prefectures · 62,261 records</li>
         <li>REST API + MCP server</li>
         <li>Liveness re-verified monthly</li>
         <li>Verified, corrected names</li>
@@ -255,10 +255,12 @@ hr.sec{border:0;border-top:1px solid var(--bd);margin:44px 0 0}
     web-verified (with evidence) before removing. Full history via the <code>get_ramen_changes</code>
     MCP tool or <a href="/subscribe">Pro</a>.</p>
   <dl class="faq">
+    <dt>2026-07-22 — data-quality release</dt>
+    <dd><b>117 shops restored</b> — an address-parsing fix (relocation notes were breaking geocoding) rescued real shops that our anti-fake-data gate had wrongly quarantined, each re-verified against independent sources. 2,086 addresses cleaned of relocation-note artifacts. New <b>chain</b> field + <code>chain=</code> filter on search (105 curated chains, e.g. chain=ラーメンショップ returns the whole 379-shop family). Data current as of 2026-07-22 · <b>62,261 active shops</b>.</dd>
     <dt>2026-07-17 — nationwide re-crawl</dt>
     <dd>Re-checked all 47 prefectures. <b>3 shops added</b>; <b>32 closures web-verified and removed</b>
       (each with a source link). Renames were kept live; unconfirmed disappearances were left active.
-      Data current as of 2026-07-17 · <b>62,144 active shops</b>.</dd>
+      Data current as of 2026-07-17 · <b>62,261 active shops</b>.</dd>
   </dl>
 
   <h2>FAQ</h2>
